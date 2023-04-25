@@ -56,6 +56,8 @@ export async function updateActivity(id, time, county, address, category, descri
     return updatedActivity[0];
 }
 
+
+
 export async function deleteActivity(id) {
     const result = await pool.query('DELETE FROM activity WHERE id = ?', [id]);
     return result;

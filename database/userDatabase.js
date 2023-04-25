@@ -28,6 +28,7 @@ export async function deleteUser(id) {
 
 export async function updateUser(id, first_name, email) {
     const result = await pool.query(`UPDATE user SET first_name = ?, email = ? WHERE id = ?`, [first_name, email, id]);
-    return result;
+    const user = getUser(id);
+    return user;
 }
 
