@@ -63,7 +63,7 @@ queueRoutes.get('/getParticipantsInQueue/:id', async (req, res) => {
         res.status(201).send(participantsInQueue);
     } catch (error) {
         console.error("error inne i hente participants in queue", error);
-        res.status(500).send({ error: error.message });
+        res.status(500).send({ error: error.message }); git
     }
 });
 
